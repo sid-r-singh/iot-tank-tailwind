@@ -1,5 +1,6 @@
 // Import stylesheets
 import './style.css';
+import './pace.js';
 // Write Javascript code!
 var cnt=document.getElementById("count"); 
 var water=document.getElementById("water");
