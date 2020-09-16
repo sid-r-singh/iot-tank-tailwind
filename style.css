@@ -1,0 +1,129 @@
+*, *:before, *:after {
+  box-sizing: border-box;
+  outline: none;
+}
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;600;700&display=swap');
+body {
+  background-image: linear-gradient(45deg,#CE9FFC, #7367F0);
+  font: 14px/1 'Open Sans', helvetica, sans-serif;
+  -webkit-font-smoothing: antialiased;
+}
+
+.box {
+  height: 180px;
+  width: 180px;
+  position: relative;
+  top: 50%;
+  left: 50%;
+  -webkit-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
+  background: #020438;
+  border-radius: 100%;
+  overflow: hidden;
+}
+.box .percent {
+  position: absolute;
+  left: 0;
+  top: 0;
+  z-index: 3;
+  width: 100%;
+  height: 100%;
+  display: -webkit-box;
+  display: flex;
+  display: -webkit-flex;
+  -webkit-box-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+          justify-content: center;
+  color: #fff;
+  font-size: 64px;
+}
+.box .water {
+  position: absolute;
+  left: 0;
+  top: 0;
+  z-index: 2;
+  width: 100%;
+  height: 100%;
+  -webkit-transform: translate(0, 100%);
+          transform: translate(0, 100%);
+  background: #4D6DE3;
+  -webkit-transition: all .3s;
+  transition: all .3s;
+}
+.box .water_wave {
+  width: 200%;
+  position: absolute;
+  bottom: 100%;
+}
+.box .water_wave_back {
+  right: 0;
+  fill: #C7EEFF;
+  -webkit-animation: wave-back 3s infinite linear;
+          animation: wave-back 3s infinite linear;
+}
+.box .water_wave_front {
+  left: 0;
+  fill: #4D6DE3;
+  margin-bottom: -1px;
+  -webkit-animation: wave-front 1.5s infinite linear;
+          animation: wave-front 1.5s infinite linear;
+}
+
+@-webkit-keyframes wave-front {
+  100% {
+    -webkit-transform: translate(-50%, 0);
+            transform: translate(-50%, 0);
+  }
+}
+
+@keyframes wave-front {
+  100% {
+    -webkit-transform: translate(-50%, 0);
+            transform: translate(-50%, 0);
+  }
+}
+@-webkit-keyframes wave-back {
+  100% {
+    -webkit-transform: translate(50%, 0);
+            transform: translate(50%, 0);
+  }
+}
+@keyframes wave-back {
+  100% {
+    -webkit-transform: translate(50%, 0);
+            transform: translate(50%, 0);
+  }
+}
+
+
+.spinner {
+  width: 20px;
+  height: 20px;
+  
+  background-color: #F36265;
+position: relative;
+
+  border-radius: 100%;  
+  -webkit-animation: sk-scaleout 1.0s infinite ease-in-out;
+  animation: sk-scaleout 1.0s infinite ease-in-out;
+}
+
+@-webkit-keyframes sk-scaleout {
+  0% { -webkit-transform: scale(0) }
+  100% {
+    -webkit-transform: scale(1.0);
+    opacity: 0;
+  }
+}
+
+@keyframes sk-scaleout {
+  0% { 
+    -webkit-transform: scale(0);
+    transform: scale(0);
+  } 100% {
+    -webkit-transform: scale(1.0);
+    transform: scale(1.0);
+    opacity: 0;
+  }
+}
