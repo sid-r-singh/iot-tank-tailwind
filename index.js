@@ -9,7 +9,7 @@ interval=setInterval(function(){
   percent++; 
   cnt.innerHTML = percent; 
   water.style.transform='translate(0'+','+(100-percent)+'%)';
-  if(percent==60){
+  if(percent==30){
     clearInterval(interval);
   }
 },60);
