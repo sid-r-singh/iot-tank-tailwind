@@ -22,6 +22,7 @@ firebase.initializeApp(firebaseConfig);
 
 var database = firebase.database();
 var ref = database.ref("Tanks/tank1");
+var ref2 = database.ref("Tanks/tank2");
 
 ref.on("value", function(snap){
 
@@ -44,5 +45,8 @@ percent--;
 console.log("value*2="+snap.val()*2);
 console.log("prev value="+prev_value);
 
+});
+ref2.on("value", function(snap){
+  
 });
 
