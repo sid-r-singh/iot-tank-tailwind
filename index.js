@@ -41,8 +41,8 @@ percent--;
   }
 },60);
 
-console.log(snap.val()*2);
-console.log("prev value=");
-console.log(prev_value);
+console.log("value*2="+snap.val()*2);
+console.log("prev value="+prev_value);
+
 });
 
