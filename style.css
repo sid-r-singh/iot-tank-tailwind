@@ -184,7 +184,7 @@ position: relative;
 
 
  .progress-bar {
-    background-color: #1a1a1a;
+    background-color: #d6bcfa;
     height: 5px;
 
     
@@ -205,7 +205,7 @@ position: relative;
     position: relative;
   }
  .orange span {
-    background-color: #20BDFF;
+    background-color: #553c9a;
     background-image: linear-gradient(top, #5433FF, #20BDFF);
   }
   .shine span::after {
