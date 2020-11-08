@@ -23,6 +23,7 @@ firebase.initializeApp(firebaseConfig);
 var database = firebase.database();
 var ref = database.ref("Tanks/tank1");
 var ref2 = database.ref("Tanks/tank2");
+var ref3 = database.ref("Tanks/tank3");
 
 ref.on("value", function(snap){
 
@@ -47,7 +48,14 @@ console.log("prev value="+prev_value);
 
 });
 ref2.on("value", function(snap){
-  
+  var per = snap.val()+"%";
+  document.getElementById("tank2").innerHTML = per;
+  document.getElementById("tank2_m").style.width = per;
+});
+ref3.on("value", function(snap){
+  var per = snap.val()+"%";
+  document.getElementById("tank3").innerHTML=snap.val()+"%";
+   document.getElementById("tank3_m").style.width = per;
 });
 
 
