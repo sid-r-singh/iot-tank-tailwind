@@ -234,3 +234,14 @@ position: relative;
       width: 95%;
     }
   }
+
+//blinking text
+
+.blink span{
+animation: blink 4s ease-in infinite;
+}
+@keyframes blink{
+0%{opacity: 0;}
+50%{opacity: .8;}
+100%{opacity: 0;}
+}

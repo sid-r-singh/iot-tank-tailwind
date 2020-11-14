@@ -21,9 +21,9 @@ var firebaseConfig = {
 firebase.initializeApp(firebaseConfig);
 
 var database = firebase.database();
-var ref = database.ref("Tanks/tank1");
-var ref2 = database.ref("Tanks/tank2");
-var ref3 = database.ref("Tanks/tank3");
+var ref = database.ref("Tank1/level");
+var ref2 = database.ref("Tank2/level");
+var ref3 = database.ref("Tank3/level");
 
 ref.on("value", function(snap){
 
